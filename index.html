@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Inscrição</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        background-color: rgb(246, 207, 234);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+</style>
+
+<body>
+    <header
+        style="width: 100%; height: 130px; background-color: rgb(47, 1, 41); display: flex; flex-direction: column; align-items: center; justify-content: center;padding-top: 1%;">
+        <h1 style="color: aliceblue;">Inscrição para o Evento</h1>
+
+        <nav>
+            <p style="color: aliceblue;">seja bem-vindo!</p>
+            <hr>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+
+
+        <div style="width: 100%;height: 100%; justify-content: center; align-items: center;">
+            <h3 style="text-align: center; font-weight: 500;">Formulário de Inscrição</h3>
+            <p style="text-align: center; font-size: 80%;font-weight: 600;">Preencha os campos abaixo para se inscrever
+                no evento.</p>
+        </div>
+
+
+        <div style="width: 100%;height: 100%;">
+            <form action="/processar-forms" method="post">
+
+                <div
+                    style="display: flex; width: 100%; height: 30%; justify-content: center; align-items: center; padding: 1%;">
+                    <label for="Nome:" style="font-weight: 600;">Nome:</label>
+                    <input type="text" name="name" id="" placeholder="Digite seu nome" required
+                        style="width: 20%; height: 25px; margin-left: 1%; margin-right: 1%; border-radius: 8px;">
+
+                    <label for="Email:" style="font-weight: 600;">Email:</label>
+                    <input type="email" name="email" id="" placeholder="Digite seu email" required
+                        style="width: 20%; height: 25px; margin-left: 1%; margin-right: 1%; border-radius: 8px;">
+
+                    <label for="Telefone" style="font-weight: 600;">Telefone:</label>
+                    <input type="tel" name="telefone" id="" placeholder="Digite seu telefone" required
+                        style="width: 20%; height: 25px; margin-left: 1%; margin-right: 1%; border-radius: 8px;">
+                </div>
+
+
+                <div
+                    style="display: flex; width: 100%; height: 30%; justify-content: center; align-items: center;padding: 1%;">
+
+                    <label for="dataNasc" style="margin-right: 10px; font-weight: 600;">Data de nascimento:</label>
+                    <input type="date" name="dataNasc" id="dataNasc" placeholder="Digite sua data de nascimento"
+                        required
+                        style="width: 15%; height: 30px; margin-left: 0.5%; margin-right: 1%; border-radius: 8px;">
+
+                    <label for="Genero:" style="font-weight: 600;">Genero:</label>
+                    <input type="radio" name="genero" id="" value="masculino" required
+                        style="width: 1%;height: 27px;margin-left: 1%;margin-right: 1%;"> Masculino
+                    <input type="radio" name="genero" id="" value="feminino" required
+                        style="width: 1%;height: 27px;margin-left: 1%;margin-right: 1%;"> Feminino
+                    <input type="radio" name="genero" id="" value="outro" required
+                        style="width: 1%;height: 27px;margin-left: 1%;margin-right: 1%;"> Outro
+
+
+                    <label for="tpIncric" style="margin-left: 20px;font-weight: 600; margin-right: 10px;">Tipo de Inscrição:</label>
+                    <select name="tpIncric" id="tpIncric"
+                        style="width: 15%; height: 30px; margin-left: 1%; margin-right: 1%; border-radius: 8px;padding: 0.5%;"
+                        required>
+                        <option value="selecione">Selecione o tipo de inscrição</option>
+                        <option value="Palestrante">Palestrante</option>
+                        <option value="Participante">Participante</option>
+                        <option value="Voluntario">Voluntário</option>
+                    </select>
+                </div>
+
+                <div style="width: 100%; height: 30%; display: flex; flex-direction: column; align-items: center; padding: 1%;">
+                    <label for="mensagem" style="margin-bottom: 5px; text-align: center;font-weight: 600;">Mensagem:</label>
+                    <textarea name="mensagem" id="mensagem" cols="8" rows="6" maxlength="200" placeholder="Digite sua mensagem"
+                        style="width: 40%; height: 100%; border-radius: 8px; padding: 5px;" required></textarea>
+                </div>
+                
+                <div style="display: flex; width: 100%; height: 10%; justify-content: center; align-items: center; padding: 1%;">
+                    <button type="submit" style="font-weight: 600;height: 30px; width: 10%; margin-left: 1%; margin-right: 1%; border-radius: 8px; background-color: #4c7aaf; color: white; border: none; cursor: pointer;">Enviar</button>
+                
+                    <button type="reset" style="font-weight: 600;height: 30px; width: 10%; margin-left: 1%; margin-right: 1%; border-radius: 8px; background-color: #f4365f; color: white; border: none; cursor: pointer;">Limpar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
